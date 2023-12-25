@@ -1,0 +1,25 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InzynierkaMauiFront.Pages.TodaysCoursesPage"
+             xmlns:local="clr-namespace:InzynierkaMauiFront.Models">
+    <ContentPage.Content>
+        <CollectionView x:Name="coursesCollectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame HasShadow="True" CornerRadius="20" BorderColor="DarkGray">
+                        <StackLayout Orientation="Vertical" Padding="0" Spacing="0">
+                            <Grid>
+                                <!-- Display your course data here -->
+                                <Label Text="{Binding NameOfClass}" x:Name="SelectedNameOfClass"/>
+                                <Label Text="{Binding DateOfClass}"   VerticalOptions="End"/>
+
+                                <!-- Button on the right side -->
+                                <Button Text="Check attendance" WidthRequest="150" HorizontalOptions="End" x:Name="CheckAttendanceButton" Clicked="CheckAttendanceButton_OnClicked"/>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>

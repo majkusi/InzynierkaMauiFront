@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InzynierkaMauiFront", "InzynierkaMauiFront.csproj", "{06C24ECF-33BA-4E12-80CA-B0790AFC8709}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06C24ECF-33BA-4E12-80CA-B0790AFC8709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C24ECF-33BA-4E12-80CA-B0790AFC8709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C24ECF-33BA-4E12-80CA-B0790AFC8709}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{06C24ECF-33BA-4E12-80CA-B0790AFC8709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C24ECF-33BA-4E12-80CA-B0790AFC8709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C24ECF-33BA-4E12-80CA-B0790AFC8709}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E90D69BC-1390-4203-8667-D73247464544}
+	EndGlobalSection
+EndGlobal
