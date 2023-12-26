@@ -9,6 +9,7 @@
             <Label Text="{Binding name}" />
             <!-- Add other labels for additional properties -->
             <Button Clicked="OnCheckAttendanceClicked" Text="Zacznij sprawdzac obecnosc !"></Button>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
