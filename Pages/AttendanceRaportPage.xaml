@@ -1,9 +1,35 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="InzynierkaMauiFront.Pages.AttendanceRaportPage">
-    <ContentPage.Content>
-        
-    </ContentPage.Content>
+             x:Class="InzynierkaMauiFront.Pages.AttendanceRaportPage"
+             Title="Listy obecnosci">
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="FillAndExpand">
+            <Entry x:Name="StudentAlbumNumberEntry" Placeholder="Numer albumu"></Entry>
+            <Button x:Name="FindAttendanceByStudentAlbumBtn" Text="Szukaj" Clicked="FindAttendanceByStudentAlbumBtn_OnClicked"></Button>
+            <Label Text="{Binding Student.FirstName}"/>
+            <Label Text="{Binding Student.LastName}"/>
+
+            <CollectionView x:Name="attendanceCollectionView">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame HasShadow="True" CornerRadius="20" BorderColor="DarkGray" WidthRequest="1000">
+                            <StackLayout Orientation="Vertical" Padding="10" Spacing="5">
+                                <Label Text="{Binding IsPresent, StringFormat='Obecny: {0}'}" FontAttributes="Bold">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding IsPresent}" Value="True">
+                                            <Setter Property="Text" Value="Tak" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                                <Label Text="{Binding Course.NameOfClass}" FontAttributes="Bold" />
+                                <Label Text="{Binding Course.DateOfClass, StringFormat='Data: {0:d}'}" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

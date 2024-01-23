@@ -1,4 +1,5 @@
-﻿using InzynierkaMauiFront.Features;
+﻿using System.Runtime.InteropServices.JavaScript;
+using InzynierkaMauiFront.Features;
 using InzynierkaMauiFront.Models;
 using Refit;
 
@@ -20,23 +21,19 @@ namespace InzynierkaMauiFront.Pages
 
         private async void LoadCourses()
         {
-            try
-            {
-                var courses = await _apiService.GetCourses();
-                coursesCollectionView.ItemsSource = courses;
-            }
-            catch (ApiException ex)
-            {
-                // Handle exception if needed
-            }
+            var allCourses = await _apiService.GetCourses();
+
+            // Filtruj zajęcia na bieżący dzień
+            var today = DateTime.Today;
+            var todaysCourses = allCourses.Where(course => course.DateOfClass.Date == today);
+
+            coursesCollectionView.ItemsSource = todaysCourses.ToList();
         }
         private async void CheckAttendanceButton_OnClicked(object? sender, EventArgs e)
         {
             if (sender is Button button && button.BindingContext is CourseModel selectedCourse)
             {
-                int classId = selectedCourse.CourseId;
-                
-                Console.WriteLine(classId + " GOWNO JEBANE W TODAYS");
+                int classId = selectedCourse.CourseId; 
                 
                 await Shell.Current.GoToAsync($"checkAttendancePage?classId={classId}");
             }

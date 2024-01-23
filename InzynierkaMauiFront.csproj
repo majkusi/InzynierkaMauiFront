@@ -67,9 +67,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Pages\AttendanceRaportPage.xaml.cs">
-	    <DependentUpon>AttendanceRaportPage.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="Pages\CheckAttendancePage.xaml.cs">
 	    <DependentUpon>CheckAttendancePage.xaml</DependentUpon>
 	  </Compile>
@@ -88,10 +85,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\AttendanceRaportPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\CheckAttendancePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\CourseDetailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\MainMenuPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\TodaysCoursesPage.xaml">

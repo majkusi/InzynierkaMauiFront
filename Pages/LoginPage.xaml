@@ -9,7 +9,7 @@
                 Padding="30,0"
                 Spacing="25">
                 <Image
-                    Source="dotnet_bot.png"
+                    Source="zut_logo.png"
                     HeightRequest="185"
                     Aspect="AspectFit"
                     SemanticProperties.Description="dot net bot in a race car number eight" />
@@ -19,8 +19,8 @@
                     Style="{StaticResource Headline}"
                     SemanticProperties.HeadingLevel="Level1" />
 
-                <Entry Placeholder="Login"></Entry>
-                <Entry Placeholder="Haslo" IsPassword="True"></Entry>
+                <Entry x:Name="loginEntry" Placeholder="Login"></Entry>
+                <Entry x:Name ="passwordEntry" Placeholder="Haslo" IsPassword="True"></Entry>
                 <Button x:Name="loginButton" Text="Zaloguj!" Clicked="LoginButton_OnClicked"></Button>
             </VerticalStackLayout>
         </ScrollView>

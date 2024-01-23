@@ -1,12 +1,13 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InzynierkaMauiFront.Pages.TodaysCoursesPage"
-             xmlns:local="clr-namespace:InzynierkaMauiFront.Models">
+             xmlns:local="clr-namespace:InzynierkaMauiFront.Models"
+             Title="Dzisiejsze zajecia">
     <ContentPage.Content>
         <CollectionView x:Name="coursesCollectionView">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame HasShadow="True" CornerRadius="20" BorderColor="DarkGray">
+                    <Frame HasShadow="True" CornerRadius="20" BorderColor="DarkGray" WidthRequest="1000" >
                         <StackLayout Orientation="Vertical" Padding="0" Spacing="0">
                             <Grid>
                                 <!-- Display your course data here -->
@@ -14,7 +15,7 @@
                                 <Label Text="{Binding DateOfClass}"   VerticalOptions="End"/>
 
                                 <!-- Button on the right side -->
-                                <Button Text="Check attendance" WidthRequest="150" HorizontalOptions="End" x:Name="CheckAttendanceButton" Clicked="CheckAttendanceButton_OnClicked"/>
+                                <Button Text="Sprawdz obecnosc!" WidthRequest="150" HorizontalOptions="End" x:Name="CheckAttendanceButton" Clicked="CheckAttendanceButton_OnClicked"/>
                             </Grid>
                         </StackLayout>
                     </Frame>

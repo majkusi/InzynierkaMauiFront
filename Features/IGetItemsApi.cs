@@ -1,4 +1,5 @@
 ﻿
+using InzynierkaApi.Models;
 using InzynierkaMauiFront.Models;
 using InzynInzynierkaMauiFrontierkaApi.Models;
 using Refit;
@@ -17,12 +18,15 @@ public interface IGetItemsApi
     [Get("/Course/GetByDate/{date}")]
     Task<DateTime> GetCourseDate(DateTime date);
 
+    [Get("/GetByCourse/{id}")]
+    Task<List<StudentModel>> GetAllStudentsInCourse(int id);
+
     // ATTENDANCE
     [Get("/Attendance/GetByCourse/{courseId")]
     Task<int> GetAttendanceByCourse(int courseId);
 
-    [Get("/Attendance/GetByStudent/{studentId}")]
-    Task<int> GetAttendanceByStudentId(int studentId);
+    [Get("/Attendance/GetByStudent/{albumId}")]
+    Task<List<AttendanceModel>> GetAttendanceByStudentId(string albumId);
 
 
     // STUDENTS
@@ -31,7 +35,7 @@ public interface IGetItemsApi
     Task<List<StudentModel>> GetStudents();
 
     [Get("/GetById/{id}")]
-    Task<int> GetStudentById(int id);
+    Task<StudentModel> GetStudentById(string id);
 
     // TEACHERS
     [Get("/Teacher/GetTeachers")]
