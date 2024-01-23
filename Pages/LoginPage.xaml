@@ -2,7 +2,9 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="InzynierkaMauiFront.Pages.LoginPage">
+             x:Class="InzynierkaMauiFront.Pages.LoginPage"
+             x:Name="LoginPageName"
+             Shell.FlyoutBehavior="Disabled">
     <ContentPage.Content>
         <ScrollView>
             <VerticalStackLayout
@@ -21,7 +23,7 @@
 
                 <Entry x:Name="loginEntry" Placeholder="Login"></Entry>
                 <Entry x:Name ="passwordEntry" Placeholder="Haslo" IsPassword="True"></Entry>
-                <Button x:Name="loginButton" Text="Zaloguj!" Clicked="LoginButton_OnClicked"></Button>
+                <Button x:Name="loginButton" Text="Zaloguj!" Clicked="LoginButton_Clicked"></Button>
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>

@@ -1,4 +1,5 @@
 ﻿
+using InzynierkInzynierkaMauiFrontaApi.Models;
 using InzynInzynierkaMauiFrontierkaApi.Models;
 using Refit;
 
@@ -11,4 +12,5 @@ public interface IPostItemsApi
     [Multipart]
     [Post("/api/compare/{courseId}")]
     Task<string> CompareFaces([AliasAs("courseId")] int courseId, [AliasAs("sourceImage")] IEnumerable<StreamPart> streams);
+ 
 }

@@ -5,22 +5,30 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:InzynierkaMauiFront"
     xmlns:pages="clr-namespace:InzynierkaMauiFront.Pages"
-    Title="InzynierkaMauiFront">
+    Title="InzynierkaMauiFront"
+    >
+
 
     <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}" />
-    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" IsVisible="{Binding IsLoggedIn}">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <Tab Title="Menu glowne">
             <ShellContent ContentTemplate="{DataTemplate pages:MainMenuPage}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" IsVisible="{Binding IsLoggedIn}">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <Tab Title="Plan zajec">
             <ShellContent ContentTemplate="{DataTemplate pages:TodaysCoursesPage}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" IsVisible="{Binding IsLoggedIn}">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <Tab Title="Listy obecnosci">
             <ShellContent ContentTemplate="{DataTemplate pages:AttendanceRaportPage}" />
         </Tab>
     </FlyoutItem>
+
+
+
 </Shell>
